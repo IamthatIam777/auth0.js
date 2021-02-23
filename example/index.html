@@ -432,11 +432,11 @@
         var domain =
           $domainInput.val() ||
           Cookies.get('auth0_domain') ||
-          'brucke.auth0.com';
+          'elkdanger.eu.auth0.com';
         var clientId =
           $clientIdInput.val() ||
           Cookies.get('auth0_client_id') ||
-          'k5u3o2fiAA8XweXEEX604KCwCjzjtMU6';
+          'TgqxTDJFG2G3H5TjqvIEEVL5i6IcZGye';
         var clientIdPwl =
           $clientIdPwl.val() ||
           Cookies.get('auth0_client_id_pwl') ||
@@ -453,7 +453,8 @@
           redirectUri: REDIRECT_URL,
           clientID: clientId,
           responseType: 'token id_token',
-          plugins: [new CordovaAuth0Plugin()]
+          plugins: [new CordovaAuth0Plugin()],
+          organization: 'org_KGZvWnYaUz8jTCxU'
         });
 
         webAuthPasswordless = new auth0.WebAuth({
